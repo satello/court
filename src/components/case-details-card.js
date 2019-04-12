@@ -160,7 +160,7 @@ const StyledInnerCard = styled(Card)`
   }
 `
 const StyledIFrame = styled.iframe`
-  height: 215px;
+  height: 265px;
   width: 100%;
 `
 const StyledInnerCardActionsTitleDiv = styled.div`
@@ -201,6 +201,7 @@ const CaseDetailsCard = ({ ID }) => {
       [drizzleState.account, ID]
     )
   )
+
   const votesData = useCacheCall(['KlerosLiquid'], call => {
     let votesData = { loading: true }
     const currentRuling = call('KlerosLiquid', 'currentRuling', ID)
